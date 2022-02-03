@@ -192,6 +192,10 @@ transpose_of_b = np.transpose(b)
 print(transpose_of_b)
 
 # Exercise 11 - reshape the array b to be a single list of 6 numbers. (1 x 6)
+flat_b = b.flatten()
+print(flat_b)
+reshape_b_6 = b.reshape(6)
+print(reshape_b_6)
 reshape_1by6_b = np.reshape(b,(1,6))
 print(reshape_1by6_b)
 
@@ -238,21 +242,26 @@ print(shape_of_c)
 # Exercise 5 - Transpose c and print out transposed result.
 transpose_of_c = np.transpose(c)
 print(transpose_of_c)
+# another way = c.T
 
 # Exercise 6 - Get the dot product of the array c with c. 
 dot_prod_c = np.dot(c, c)
 print(dot_prod_c)
+#c.dot(c)
 
 # Exercise 7 - Write the code necessary to sum up the result of c times c transposed. 
 # Answer should be 261
 cxc_trans = transpose_of_c * c
+# c * c.T
 sum_of_cxc_trans = cxc_trans.sum()
 print(sum_of_cxc_trans)
+#(c * c.T).sum()
 
 # Exercise 8 - Write the code necessary to determine the product of c times c transposed. 
 # Answer should be 131681894400.
 product_of_cxc_trans = cxc_trans.prod()
 print(product_of_cxc_trans)
+#(c * c.T).prod()
 
 ## Setup 4
 d = [
